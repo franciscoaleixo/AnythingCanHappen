@@ -5,8 +5,10 @@ public class Dice : MonoBehaviour {
 	private int numberOfMoves;
 
 	private int ThrowDice() {
-		// O zero esta incluido, player pode nao mexer
-		numberOfMoves = rnd.Next (6);
+		numberOfMoves = rnd.Next (6); // O zero esta incluido, player pode nao mexer
 	}
 	//Getter do numberOfMoves
+	public int setMoves (int Moves) {
+		this.numberOfMoves = Moves;
+	}
 }

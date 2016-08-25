@@ -4,25 +4,25 @@ using System.Collections;
 public class Game : MonoBehaviour {
 	private Table TabuleiroDeJogo;
 	Player [] players;
-	private enum GameLenght {FAST, NORMAL, LONG};
+	public enum GameLength {FAST, NORMAL, LONG};
 	//Funçao para escolher o jogo com interaçao ao humano
-	public Game (Player [] players, GameLenght escolha) {
+	public Game (Player [] players, GameLength escolha) {
 		int tamanho;
 		int numPlayers;
 		switch(escolha) {
-		case "FAST":
+		case GameLength.FAST:
 			tamanho = 25;
 			break;
-		case "Normal": 
+		case GameLength.NORMAL: 
 			tamanho = 50;
 			break;
-		case "Long":
+		case GameLength.LONG:
 			tamanho = 100;
 			break;
-		}
-		TabuleiroDeJogo = new Table(tamanho);
 
-		players = new Player[numPlayers];
+			TabuleiroDeJogo = new Table(tamanho);
+			players = new Player[numPlayers];
+		}
 	}
 	void Start () {
 	}

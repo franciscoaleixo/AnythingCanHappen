@@ -4,7 +4,8 @@ using System.Collections;
 public class Dice : MonoBehaviour {
 	private int numberOfMoves;
 
-	private int ThrowDice() {
-		numberOfMoves = rnd.Next (6); // O zero esta incluido, player pode nao mexer
+	public int ThrowDice() {
+		numberOfMoves = Random.Range(0,7); // rnd number de 0-6
+		return numberOfMoves;
 	}
 }
